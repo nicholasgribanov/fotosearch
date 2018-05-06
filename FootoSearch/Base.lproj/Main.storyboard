@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FootoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dLK-7Q-zUH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="257" id="Ora-f0-e66"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I1m-gd-sdp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="lyc-1e-O16"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FS0-gQ-x9b">
+                                <rect key="frame" x="-8" y="373" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SJp-fp-PPq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5z7-HU-lbK">
+                                <rect key="frame" x="169" y="122" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I1m-gd-sdp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3CQ-v5-OKG"/>
+                            <constraint firstItem="5z7-HU-lbK" firstAttribute="centerY" secondItem="I1m-gd-sdp" secondAttribute="centerY" id="7z9-1g-JAN"/>
+                            <constraint firstItem="I1m-gd-sdp" firstAttribute="trailing" secondItem="dLK-7Q-zUH" secondAttribute="trailing" id="BRt-us-aH3"/>
+                            <constraint firstItem="I1m-gd-sdp" firstAttribute="leading" secondItem="dLK-7Q-zUH" secondAttribute="leading" id="D34-ro-4Qw"/>
+                            <constraint firstItem="I1m-gd-sdp" firstAttribute="top" secondItem="dLK-7Q-zUH" secondAttribute="top" id="Qq5-5V-jzk"/>
+                            <constraint firstItem="5z7-HU-lbK" firstAttribute="centerX" secondItem="I1m-gd-sdp" secondAttribute="centerX" id="ZO0-oM-XHC"/>
+                            <constraint firstAttribute="trailing" secondItem="I1m-gd-sdp" secondAttribute="trailing" id="bWh-zl-mgq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FS0-gQ-x9b" secondAttribute="trailing" id="dlM-Ol-4mo"/>
+                            <constraint firstItem="FS0-gQ-x9b" firstAttribute="top" secondItem="dLK-7Q-zUH" secondAttribute="bottom" id="dtO-pN-a7n"/>
+                            <constraint firstItem="I1m-gd-sdp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h74-D0-AIz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I1m-gd-sdp" secondAttribute="bottom" constant="407" id="xAU-JN-iI5"/>
+                            <constraint firstItem="FS0-gQ-x9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yd1-Ec-W20"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xAU-JN-iI5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="I1m-gd-sdp" id="kIk-RB-GOv"/>
+                        <outlet property="loader" destination="5z7-HU-lbK" id="Q30-vV-PfF"/>
+                        <outlet property="textFIeld" destination="FS0-gQ-x9b" id="A9h-hk-3hZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
